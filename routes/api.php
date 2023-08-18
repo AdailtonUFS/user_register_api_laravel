@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Route::post("/novo-usuario", [\App\Http\Controllers\UserController::class, ""])
+Route::post("/novo-usuario", [\App\Http\Controllers\API\UserController::class, "store"]);
+Route::get("/buscar-usuario/{user}", [\App\Http\Controllers\API\UserController::class, "show"]);

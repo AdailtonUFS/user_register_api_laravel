@@ -15,6 +15,7 @@ return new class extends Migration
             $table->integer("cpf")->primary();
             $table->string('nome');
             $table->date('data_nascimento');
+            $table->timestamps();
         });
     }
 

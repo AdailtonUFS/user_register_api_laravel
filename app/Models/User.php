@@ -8,12 +8,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property string $nome
+ * @property integer $cpf
+ * @property mixed $data_nascimento
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $table = "usuarios";
-
+    protected $primaryKey = "cpf";
     /**
      * The attributes that are mass assignable.
      *
